@@ -19,16 +19,13 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo
         "ID: " . $row["id"] .
-            " - NAME: " . $row["vorname"] . " " . $row["nachname"] .
-            " - NUMMER: " . $row["rufnummer"] .
-            " - WOHNSITZ" . $row["wohnort"] .
-            " - M/W: " . $row["geschlecht"] .
-            "<br>";
+            " - NAME: " . $row["vorname"] . " " . $row["nachname"] . "<br>" .
+            " - NUMMER: " . $row["rufnummer"] . "<br>" .
+            " - WOHNSITZ" . $row["wohnort"] . "<br>" .
+            " - M/W: " . $row["geschlecht"] . "<br>"
+            ;
     }
 } else {
     echo "0 results";
 }
 $conn->close();
-
-
-?>
